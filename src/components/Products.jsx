@@ -1,36 +1,31 @@
-import { useState } from "react";
 import "../styles/Products.scss";
 
-export default function Products() {
-  // const [product, setProduct] = useState([]);
+export default function Products(props) {
+  console.log("props", props);
+  console.log(props.img);
 
-  // async function getProducts() {
-  //   //e.preventDefault();
-  //   const data = await fetch(
-  //     `https://main-api.fulhaus.com/fulhaus-tech-test/get-products`
-  //   )
-  //     .then((res) => res.json())
-  //     .then(
-  //       (data) => data
-  //       //const productInfo = [...new Set(data.map((product) => product))];
-  //       // console.log("INFO $$$", productInfo);
-  //       // console.log("product data*****", data);
-  //       // console.log("product data-----", data[0].color);
-  //       //setProduct(productInfo);
-  //     );
-  //   setProduct(data);
-  // }
-  // console.log("----", product);
-  //getProducts();
-  //console.log(getProducts());
+  // const image = props.img;
+  // console.log(image);
+  // const firstImg = props.img.shift();
+  // console.log(firstImg);
 
-  // function productDisplay() {
-  //   const productToDisplay =
+  //const image = [...new Set(props.img.map((item) => item[0]))];
+
+  // for (const url of props.img) {
+  //   console.log("^^^^", url);
   // }
 
   return (
-    <div>
-      <div></div>
+    <div className="product-container">
+      <div>{/* <img src={props.img} alt="furniture" /> */}</div>
+      <div>{props.brand}</div>
+      <div>{props.name}</div>
+      <div>{props.price}</div>
+      <div>
+        <button type="submit" className="add-button">
+          + Add to Cart
+        </button>
+      </div>
     </div>
   );
 }

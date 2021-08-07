@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Home.scss";
+import "../styles/Products.scss";
 import Products from "./Products";
 
 export default function Home() {
@@ -48,7 +49,7 @@ export default function Home() {
           SHOP
         </button>
       </div>
-      <div>{displayProduct()}</div>
+      <div className="product-section">{displayProduct()}</div>
     </div>
   );
 }

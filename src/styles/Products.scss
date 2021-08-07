@@ -1,0 +1,9 @@
+.product-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .product-container {
+    border: 3px solid red;
+  }
+}
