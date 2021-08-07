@@ -16,76 +16,64 @@
     // position: relative;
     // z-index: 999;
 
-    .overlay {
-      //outline-offset: -100px;
-      //background-size: cover;
-      // position: absolute;
-
+    .image {
+      //object-fit: cover;
+      //@at-root: absolute;
+      max-height: 280px;
+      max-width: 280px;
+      border-radius: 38px;
       //background: yellow;
-      // background: linear-gradient(rgb(72, 0, 72), rgb(192, 72, 72));
-      // background-size: cover;
+    }
 
-      // position: relative;
+    .product-info {
+      position: absolute;
+      z-index: 100;
+      transition: transform 0.5s ease;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 38px;
+      //border: 3px solid red;
+      font-weight: bold;
+      opacity: 0.5;
+      min-height: 280px;
+      min-width: 280px;
+      max-width: 280px;
 
-      .image {
-        //object-fit: cover;
-        //@at-root: absolute;
-        max-height: 280px;
-        max-width: 280px;
-        border-radius: 38px;
-        //background: yellow;
+      .product-name {
+        text-align: start;
+        font-size: 14px;
+        padding-left: 2em;
+        padding-top: 1em;
       }
 
-      .product-info {
+      .product-brand {
+        text-align: start;
+        font-size: 13px;
+        font-weight: lighter;
+        padding-left: 2em;
+        padding-top: 0.5em;
+      }
+
+      .product-price {
         position: absolute;
-        z-index: 100;
-        transition: transform 0.5s ease;
+        bottom: 12px;
+        left: 193px;
+        font-size: 20px;
+        margin-right: 2em;
+      }
+
+      .add-button {
+        position: absolute;
+        bottom: -161px;
+        width: 67%;
+        height: 69%;
+        display: flex;
+        text-align: left;
+        background-color: transparent;
+        border: none;
         color: white;
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 38px;
-        //border: 3px solid red;
-        font-weight: bold;
         opacity: 0.5;
-        min-height: 280px;
-        min-width: 280px;
-        max-width: 280px;
-
-        .product-name {
-          text-align: start;
-          font-size: 14px;
-          padding-left: 2em;
-          padding-top: 1em;
-        }
-
-        .product-brand {
-          text-align: start;
-          font-size: 13px;
-          font-weight: lighter;
-          padding-left: 2em;
-          padding-top: 0.5em;
-        }
-
-        .product-price {
-          position: absolute;
-          bottom: 12px;
-          left: 193px;
-          font-size: 20px;
-          margin-right: 2em;
-        }
-
-        .add-button {
-          position: absolute;
-          bottom: -161px;
-          width: 67%;
-          height: 69%;
-          display: flex;
-          text-align: left;
-          background-color: transparent;
-          border: none;
-          color: white;
-          opacity: 0.5;
-          margin-left: 1.5em;
-        }
+        margin-left: 1.5em;
       }
     }
 

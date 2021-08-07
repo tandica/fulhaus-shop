@@ -30,18 +30,16 @@ export default function Products(props) {
 
   return (
     <div className="product-container">
-      <div className="overlay">
-        <img src={result[0]} alt="furniture" className="image" />
+      <img src={result[0]} alt="furniture" className="image" />
 
-        <div className="product-info">
-          <div className="product-name">{props.name}</div>
-          <div className="product-brand">{props.brand}</div>
-          <div className="product-price">${props.price}</div>
+      <div className="product-info">
+        <div className="product-name">{props.name}</div>
+        <div className="product-brand">{props.brand}</div>
+        <div className="product-price">${props.price}</div>
 
-          <button type="submit" className="add-button">
-            + Add to Cart
-          </button>
-        </div>
+        <button type="submit" className="add-button">
+          + Add to Cart
+        </button>
       </div>
     </div>
   );
