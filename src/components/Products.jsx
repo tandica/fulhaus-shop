@@ -23,13 +23,9 @@ export default function Products(props) {
         <div className="product-brand">{props.brand}</div>
         <div className="product-price">${props.price}</div>
 
-        <a
-          type="submit"
-          href="https://www.w3schools.com"
-          className="add-button"
-        >
+        <button type="submit" className="add-button">
           + Add to Cart
-        </a>
+        </button>
       </div>
     </div>
   );
