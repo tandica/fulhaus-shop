@@ -1,26 +1,40 @@
 import { useState } from "react";
 import "../styles/Home.scss";
+import Products from "./Products";
 
 export default function Home() {
   const [product, setProduct] = useState([]);
 
+  //get product info from api
   async function getProducts(e) {
     e.preventDefault();
     const data = await fetch(
       `https://main-api.fulhaus.com/fulhaus-tech-test/get-products`
     )
       .then((res) => res.json())
-      .then(
-        (data) => data
-        //const productInfo = [...new Set(data.map((product) => product))];
-        // console.log("INFO $$$", productInfo);
-        // console.log("product data*****", data);
-        // console.log("product data-----", data[0].color);
-        //setProduct(productInfo);
-      );
+      .then((data) => data);
+    //set state for products
     setProduct(data);
   }
-  console.log("----", product);
+
+  //display product info on page
+  function displayProduct() {
+    const productToDisplay = [
+      ...new Set(
+        product.map((product, index) => (
+          <Products
+            key={index}
+            img={product.imageURLs}
+            name={product.vendorProductName}
+            brand={product.vendorName}
+            price={product.MSRP}
+          />
+        ))
+      ),
+    ];
+    return productToDisplay;
+  }
+
   return (
     <div>
       <div className="home-container"></div>
@@ -34,6 +48,7 @@ export default function Home() {
           SHOP
         </button>
       </div>
+      <div>{displayProduct()}</div>
     </div>
   );
 }
