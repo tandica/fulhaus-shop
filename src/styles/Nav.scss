@@ -1,0 +1,26 @@
+.nav {
+  background-color: aquamarine;
+
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+
+    .nav-title {
+      margin-left: 2em;
+    }
+
+    .nav-button {
+      margin-right: 2em;
+      width: 7%;
+      height: 69%;
+      margin-top: 0.5em;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      font-size: 16px;
+      padding-right: 4.8rem;
+      padding-left: 2rem;
+      color: white;
+      background-color: black;
+    }
+  }
+}
