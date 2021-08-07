@@ -2,15 +2,24 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background: #f7efe7;
 
   .product-container {
-    border: 3px solid red;
+    //border: 3px solid red;
     border-radius: 38px;
-    min-height: 280px;
-    min-width: 280px;
+    max-height: 280px;
+    max-width: 280px;
     margin: 1em;
-    padding: 1rem;
+    //padding: 1rem;
     position: relative;
+
+    .image {
+      //object-fit: cover;
+      //@at-root: absolute;
+      max-height: 280px;
+      max-width: 280px;
+      border-radius: 38px;
+    }
 
     .product-info {
       position: absolute;
@@ -59,6 +68,10 @@
 
         .add-button {
           opacity: 1;
+        }
+
+        .image {
+          background: rgba(0, 0, 0, 0.8);
         }
       }
     }
