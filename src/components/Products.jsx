@@ -18,13 +18,18 @@ export default function Products(props) {
   return (
     <div className="product-container">
       <div>{/* <img src={props.img} alt="furniture" /> */}</div>
-      <div>{props.brand}</div>
-      <div>{props.name}</div>
-      <div>{props.price}</div>
-      <div>
-        <button type="submit" className="add-button">
+      <div className="product-info">
+        <div className="product-name">{props.name}</div>
+        <div className="product-brand">{props.brand}</div>
+        <div className="product-price">${props.price}</div>
+
+        <a
+          type="submit"
+          href="https://www.w3schools.com"
+          className="add-button"
+        >
           + Add to Cart
-        </button>
+        </a>
       </div>
     </div>
   );
