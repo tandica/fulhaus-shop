@@ -2,10 +2,23 @@ import "../styles/Products.scss";
 
 export default function Products(props) {
   console.log("props", props);
-  console.log(props.img);
+  console.log("typeeee", typeof props.img);
+  //console.log("img data", props.img);
 
-  // const image = props.img;
-  // console.log(image);
+  const image = props.img;
+  console.log("image", image);
+
+  // console.log("TESTING****", Object.keys(props.img));
+
+  const obj = {};
+
+  const result = Object.assign(obj, image);
+  console.log("result", result);
+  console.log("result---->", result[0]);
+  //console.log("TESTING****", Object.keys(result)[0]);
+
+  //const firstObj = result.shift();
+  //console.log("checkkkk", firstObj);
   // const firstImg = props.img.shift();
   // console.log(firstImg);
 
@@ -17,7 +30,9 @@ export default function Products(props) {
 
   return (
     <div className="product-container">
-      <div>{/* <img src={props.img} alt="furniture" /> */}</div>
+      <div>
+        <img src={result[0]} alt="furniture" />
+      </div>
       <div className="product-info">
         <div className="product-name">{props.name}</div>
         <div className="product-brand">{props.brand}</div>

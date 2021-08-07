@@ -18,6 +18,8 @@ export default function Home() {
     setProduct(data);
   }
 
+  console.log("HERE=====>", product);
+
   //display product info on page
   function displayProduct() {
     const productToDisplay = [
