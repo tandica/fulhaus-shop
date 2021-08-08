@@ -23,7 +23,8 @@ export default function Nav({ name, ...props }) {
             <Offcanvas.Title>Your Cart</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Products />
+            Nothing yet.
+            {/* <Products /> */}
           </Offcanvas.Body>
         </Offcanvas>
       </div>
