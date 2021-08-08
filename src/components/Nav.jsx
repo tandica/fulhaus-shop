@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/Nav.scss";
 //import Cart from "./Cart";
 import { Offcanvas } from "react-bootstrap";
+import Products from "./Products";
 
 export default function Nav({ name, ...props }) {
   const [show, setShow] = useState(false);
@@ -22,8 +23,7 @@ export default function Nav({ name, ...props }) {
             <Offcanvas.Title>Your Cart</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            Some text as placeholder. In real life you can have the elements you
-            have chosen. Like, text, images, lists, etc.
+            <Products />
           </Offcanvas.Body>
         </Offcanvas>
       </div>

@@ -4,6 +4,7 @@
   top: 0;
   width: 100%;
   display: flex;
+  z-index: 999;
 
   .nav-items {
     display: flex;
@@ -12,6 +13,7 @@
 
     .nav-title {
       margin-left: 2em;
+      margin-top: 1rem;
     }
 
     .nav-button {
