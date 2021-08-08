@@ -1,43 +1,58 @@
 import "../styles/Products.scss";
+import React, { useState, useRef, useEffect } from "react";
 
 export default function Products(props) {
-  console.log("props", props);
-  console.log("typeeee", typeof props.img);
-  //console.log("img data", props.img);
+  const [cartItems, setCartItems] = useState([]);
+  const [history, setHistory] = useState([props]);
 
+  //access first image from imageURLs section in object
   const image = props.img;
-  console.log("image", image);
-
-  // console.log("TESTING****", Object.keys(props.img));
-
   const obj = {};
-
   const result = Object.assign(obj, image);
-  console.log("result", result);
-  console.log("result---->", result[0]);
-  //console.log("TESTING****", Object.keys(result)[0]);
 
-  //const firstObj = result.shift();
-  //console.log("checkkkk", firstObj);
-  // const firstImg = props.img.shift();
-  // console.log(firstImg);
+  //console.log("props", props.id);
 
-  //const image = [...new Set(props.img.map((item) => item[0]))];
-
-  // for (const url of props.img) {
-  //   console.log("^^^^", url);
+  // function update(newMode, replace) {
+  //   if (replace) {
+  //     setHistory((prev) => [...prev.slice(0, prev.length - 1), newMode]);
+  //     console.log(newMode);
+  //   } else {
+  //     setHistory((prev) => [...prev, newMode]);
+  //   }
+  //   setCartItems(newMode);
   // }
+
+  // update();
+
+  // console.log("history", history);
+
+  function addToCart(item) {
+    // const cart = [...cartItems];
+    // cart.push(props);
+    // console.log("cart new", cart);
+
+    // setCartItems(cart);
+
+    const updateCart = [...cartItems, item];
+    updateCart.forEach((e) => console.log("foreach", e));
+    setCartItems(updateCart);
+  }
+
+  console.log("new state", cartItems);
 
   return (
     <div className="product-container">
       <img src={result[0]} alt="furniture" className="image" />
-
       <div className="product-info">
         <div className="product-name">{props.name}</div>
         <div className="product-brand">{props.brand}</div>
         <div className="product-price">${props.price}</div>
 
-        <button type="submit" className="add-button">
+        <button
+          type="submit"
+          className="add-button"
+          onClick={() => addToCart({ ...props })}
+        >
           + Add to Cart
         </button>
       </div>

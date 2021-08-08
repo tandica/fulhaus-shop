@@ -18,7 +18,7 @@ export default function Home() {
     setProduct(data);
   }
 
-  console.log("HERE=====>", product);
+  console.log("HERE=====>", product.weight);
 
   //display product info on page
   function displayProduct() {
@@ -26,7 +26,8 @@ export default function Home() {
       ...new Set(
         product.map((product, index) => (
           <Products
-            key={index}
+            key={product._id}
+            id={product._id}
             img={product.imageURLs}
             name={product.vendorProductName}
             brand={product.vendorName}

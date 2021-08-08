@@ -3,10 +3,12 @@
   position: fixed;
   top: 0;
   width: 100%;
+  display: flex;
 
   .nav-items {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 
     .nav-title {
       margin-left: 2em;
@@ -14,12 +16,12 @@
 
     .nav-button {
       margin-right: 2em;
-      width: 7%;
+      width: 0%;
       height: 69%;
       border: none;
       margin-top: 0.5em;
       padding-top: 0.7rem;
-      padding-bottom: 0.7rem;
+      padding-bottom: 1.5rem;
       font-size: 16px;
       padding-right: 4.8rem;
       padding-left: 2rem;
