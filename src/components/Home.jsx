@@ -2,7 +2,6 @@ import { useState } from "react";
 import "../styles/Home.scss";
 import "../styles/Products.scss";
 import Products from "./Products";
-import Nav from "./Nav";
 
 export default function Home() {
   const [product, setProduct] = useState([]);
@@ -18,27 +17,6 @@ export default function Home() {
     //set state for products
     setProduct(data);
   }
-
-  //console.log("HERE=====>", product.weight);
-
-  //display product info on page
-  // function displayProduct() {
-  //   const productToDisplay = [
-  //     ...new Set(
-  //       product.map((product, index) => (
-  //         <Products
-  //           key={product._id}
-  //           id={product._id}
-  //           img={product.imageURLs}
-  //           name={product.vendorProductName}
-  //           brand={product.vendorName}
-  //           price={product.MSRP}
-  //         />
-  //       ))
-  //     ),
-  //   ];
-  //   return productToDisplay;
-  // }
 
   return (
     <div>

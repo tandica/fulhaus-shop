@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "../styles/Nav.scss";
-//import Cart from "./Cart";
 import { Offcanvas } from "react-bootstrap";
-import Products from "./Products";
 
 export default function Nav({ name, ...props }) {
   const [show, setShow] = useState(false);
-  console.log("nav props", props);
+
   //create functions for closing and opening the cart
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -22,11 +20,7 @@ export default function Nav({ name, ...props }) {
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Your Cart</Offcanvas.Title>
           </Offcanvas.Header>
-          <Offcanvas.Body>
-            Nothing here yet.
-            {/* {show.length === 0 ? `Nothing here yet.` : <Products />} */}
-            {/* <Products /> */}
-          </Offcanvas.Body>
+          <Offcanvas.Body>Nothing here yet.</Offcanvas.Body>
         </Offcanvas>
       </div>
     </nav>
