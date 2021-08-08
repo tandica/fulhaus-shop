@@ -3,7 +3,6 @@ import React, { useState, useRef, useEffect } from "react";
 
 export default function Products(props) {
   const [cartItems, setCartItems] = useState([]);
-  const [history, setHistory] = useState([props]);
 
   //access first image from imageURLs section in object
   const image = props.img;
