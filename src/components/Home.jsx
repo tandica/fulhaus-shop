@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../styles/Home.scss";
 import "../styles/Products.scss";
 import Products from "./Products";
+import Nav from "./Nav";
 
 export default function Home() {
   const [product, setProduct] = useState([]);

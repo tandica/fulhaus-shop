@@ -6,7 +6,7 @@ import Products from "./Products";
 
 export default function Nav({ name, ...props }) {
   const [show, setShow] = useState(false);
-
+  console.log("nav props", props);
   //create functions for closing and opening the cart
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -23,7 +23,8 @@ export default function Nav({ name, ...props }) {
             <Offcanvas.Title>Your Cart</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            Nothing yet.
+            Nothing here yet.
+            {/* {show.length === 0 ? `Nothing here yet.` : <Products />} */}
             {/* <Products /> */}
           </Offcanvas.Body>
         </Offcanvas>

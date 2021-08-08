@@ -1,8 +1,10 @@
 import "../styles/Products.scss";
 import React, { useState, useRef, useEffect } from "react";
+import Nav from "./Nav";
 
 export default function Products(props) {
   const [cartItems, setCartItems] = useState([]);
+  const [showItem, setShowItem] = useState(false);
 
   //access first image from imageURLs section in object
   const image = props.img;
@@ -25,6 +27,8 @@ export default function Products(props) {
 
   // console.log("history", history);
 
+  //set state to update when Add to Cart button is clicked
+
   function addToCart(item) {
     // const cart = [...cartItems];
     // cart.push(props);
@@ -35,25 +39,38 @@ export default function Products(props) {
     const updateCart = [...cartItems, item];
     updateCart.forEach((e) => console.log("foreach", e));
     setCartItems(updateCart);
+    setShowItem(true);
   }
+
+  console.log("showww", showItem);
 
   console.log("new state", cartItems);
 
   return (
-    <div className="product-container">
-      <img src={result[0]} alt="furniture" className="image" />
-      <div className="product-info">
-        <div className="product-name">{props.name}</div>
-        <div className="product-brand">{props.brand}</div>
-        <div className="product-price">${props.price}</div>
-
-        <button
-          type="submit"
-          className="add-button"
+    <div>
+      {/* <div>
+        <Nav
+          placement={"end"}
+          name={"Cart"}
           onClick={() => addToCart({ ...props })}
-        >
-          + Add to Cart
-        </button>
+        />
+        ;
+      </div> */}
+      <div className="product-container">
+        <img src={result[0]} alt="furniture" className="image" />
+        <div className="product-info">
+          <div className="product-name">{props.name}</div>
+          <div className="product-brand">{props.brand}</div>
+          <div className="product-price">${props.price}</div>
+
+          <button
+            type="submit"
+            className="add-button"
+            onClick={() => addToCart({ ...props })}
+          >
+            + Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   );
